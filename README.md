@@ -6,7 +6,9 @@ Goal: develop an algorith which enables a swarm of robots to transport an object
 
 How to run with run.sh:
 
-git clone https://github.com/lvanslette/RBE511_FinalProject.git
-cd RBE511_FinalProject
-./run.sh
+- git clone https://github.com/lvanslette/RBE511_FinalProject.git 
+
+- cd RBE511_FinalProject
+
+- ./run.sh
 
