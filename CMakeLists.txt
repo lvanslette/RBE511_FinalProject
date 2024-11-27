@@ -23,17 +23,17 @@ include_directories(${BUZZ_C_INCLUDE_DIR})
 include(${BUZZ_CMAKE_USEBUZZ}/UseBuzz.cmake)
 
 # Compile code
-add_library(threshold_model SHARED threshold_model.h threshold_model.cpp)
-target_link_libraries(threshold_model
-  ${BUZZ_LIBRARY}
-  argos3core_simulator
-  argos3plugin_simulator_dynamics2d
-  argos3plugin_simulator_entities
-  argos3plugin_simulator_kheperaiv
-  argos3plugin_simulator_genericrobot
-  argos3plugin_simulator_media
-  argos3plugin_simulator_qtopengl
-  argos3plugin_simulator_buzz)
+#add_library(threshold_model SHARED threshold_model.h threshold_model.cpp)
+#target_link_libraries(threshold_model
+#  ${BUZZ_LIBRARY}
+#  argos3core_simulator
+#  argos3plugin_simulator_dynamics2d
+#  argos3plugin_simulator_entities
+#  argos3plugin_simulator_kheperaiv
+#  argos3plugin_simulator_genericrobot
+#  argos3plugin_simulator_media
+#  argos3plugin_simulator_qtopengl
+#  argos3plugin_simulator_buzz)
 
 # Compile Buzz files
-buzz_make(threshold_model.bzz)
+buzz_make(movement.bzz)
