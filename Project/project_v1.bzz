@@ -1,0 +1,135 @@
+# Use Shift + Click to select a robot
+# When a robot is selected, its variables appear in this editor
+
+# Use Ctrl + Click (Cmd + Click on Mac) to move a selected robot to a different location
+
+
+
+# Put your global variables here
+
+
+
+# This function is executed every time you press the 'execute' button
+function init() {
+	s = swarm.create(1)
+  rand_count = 0
+	r_count = 0
+	init_obj = {.x = 0.3, .y = -1.0}
+	home = {.x = -1.5, .y = -0.5}
+	state = 0 #random walk state
+	posx = pose.position.x
+	posy = pose.position.y
+	set_leds(255,0,0) # red
+	vl = 12.0
+	vr = 12.0
+	flag = 0
+	r_c = 0
+	recruited = {.0 = 0,.1 = 0,.2 = 0, .3 = 0}
+	set_wheels(vl,vr)
+}
+
+# This function is executed at each time step
+# It must contain the logic of your controller
+function step() {
+   # put your code here
+	r_count = 0
+	if (state > 0) {
+		neighbors.broadcast("recruited",1)}
+	if (state < 3) {
+		ob_avoid()
+		neighbors.listen("recruited",
+			function(vid,value,rid) {
+				if (value == 1) {
+					if (state < 2) {
+						log("no.",id,"enters state 2")}
+					state = 2 #waiting for full recruitment state
+					set_leds(0,204,0) #green
+					s.join()
+					recruited[rid] = 1
+					recruited[id] = 1
+				}	
+			})
+		
+		distx = init_obj.x - posx
+		disty = init_obj.y - posy
+		dist_mag = math.sqrt((distx^2 + disty^2))
+		if ((dist_mag < 0.4) and (state == 0)) {
+			state = 1 #recruiting neighbors state
+			log("no.",id,"enters state 1")
+			set_leds(0,0,255) # blue
+			s.join()
+			recruited[id] = 1
+			make_space = 0
+			neighbors.broadcast("mypose1",pose.position)
+		}
+	}
+	foreach(recruited,function(key,value) {
+		r_count = r_count + value})
+	#Check if all robots are recruited
+	if ((r_count == 4) and (state < 3)) {
+		log("recruitment complete!")
+		set_wheels(0.0,0.0)
+		state = 3 #move to object state
+		set_leds(255,255,0) #yellow
+		neighbors.ignore("recruited")
+	}
+	posx = pose.position.x
+	posy = pose.position.y
+}
+
+function ob_avoid() {
+	dvl = 4.0
+	dvr = 4.0
+	flag = 0
+
+	foreach(proximity, function(key, value) {
+		if (value.value > 0) {
+			flag = flag + 1
+			if (value.angle == 0) {
+				vr = -6.0
+				vl = 6.0
+				set_wheels(vl,vr)
+			}
+			else if ((value.angle > 3) and (value.angle < 3.15)) {
+				vl = 8.0
+				vr = 8.0
+			}
+			else {
+				vl = vl + dvl*math.sin(value.angle)
+				vr = vr - 1.1*dvr*math.sin(value.angle)
+				set_wheels(vl,vr)}
+		}
+		#If no objects in proximity, perform random walk
+		else if (flag == 0) {
+			if (rand_count%30 == 0) {
+ 		 		vl = 12.0
+ 				vr = math.rng.uniform(2.0,17.0)
+				set_wheels(vl,vr)}
+			rand_count = rand_count + 1
+
+		}
+		#If more than 3 sensors set off, turn around
+		else if (flag > 3) {
+			vl = 7.0
+			vr = -6.0
+			set_wheels(vl,vr)
+		}
+	})
+}
+
+# This function is executed every time you press the 'reset'
+# button in the GUI. It is supposed to restore the state
+# of the controller to whatever it was right after init() was
+# called. The state of sensors and actuators is reset
+# automatically by ARGoS.
+function reset() {
+   # put your code here
+}
+
+
+
+# This function is executed only once, when the robot is removed
+# from the simulation
+function destroy() {
+   # put your code here
+}

@@ -1,0 +1,19 @@
+# Use Shift + Click to select a robot
+# When a robot is selected, its variables appear in this editor
+
+# Use Ctrl + Click (Cmd + Click on Mac) to move a selected robot to a different location
+
+
+
+# Put your global variables here
+grid_x = {}
+grid_y = {}
+i = 2
+j = 2
+while (i > -2) {
+	while (j > -2) {
+		grid_x[
+	}
+}
+
+

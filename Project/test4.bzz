@@ -1,0 +1,170 @@
+# Use Shift + Click to select a robot
+# When a robot is selected, its variables appear in this editor
+
+# Use Ctrl + Click (Cmd + Click on Mac) to move a selected robot to a different location
+
+
+
+# Put your global variables here
+
+
+
+# This function is executed every time you press the 'execute' button
+function init() {
+	s = swarm.create(1)
+  rand_count = 0
+	r_count = 0
+  found = 0
+	fwd_timer = 40
+	init_obj = {.x = 0.3, .y = -1.0}
+	goal = {.x = -1.5, .y = -0.5}
+	leader = {.x = 1000.0, .y = 1000.0}
+	state = 0
+	posx = pose.position.x
+	posy = pose.position.y
+	set_leds(255,0,0) # red
+	m = 10
+	vl = 12.0
+	vr = 12.0
+	togo_x = goal.x - posx
+  togo_y = goal.y - posy
+	goal_t = math.atan(togo_y,togo_x)
+	togo_t = (pose.orientation.yaw - math.atan(togo_y,togo_x))
+	if (togo_t > 3.1416) {
+		togo_t = togo_t - 6.2832}
+	else if (togo_t < -3.1416) {
+		togo_t = togo_t + 6.2832}
+	flag = 0
+	priority = 1
+	r_c = 0
+	recruit_dist = 0.6
+	recruited = {.0 = 0,.1 = 0,.2 = 0, .3 = 0}
+	set_wheels(vl,vr)
+   # put your code here
+}
+
+
+
+# This function is executed at each time step
+# It must contain the logic of your controller
+function step() {
+	if (state > 0) {
+		neighbors.broadcast("recruited",1)}
+	if (state == 0) {
+		ob_avoid()
+		distx = init_obj.x - posx
+		disty = init_obj.y - posy
+		dist_mag = math.sqrt((distx^2 + disty^2))
+		if ((dist_mag < 0.4) and (state == 0)) {
+			state = 1
+			log("no.",id,"enters state 1")
+			set_leds(0,0,255) # blue
+			s.join()
+			recruited[id] = 1
+			make_space = 0
+			neighbors.broadcast("mypose1",pose.position)
+		}
+	}
+	if (state == 1) {
+		fwd = 0
+		near = 0
+		facing = 0
+		last_ang = 0
+		foreach(proximity, function(key, value) {
+			if (value.value > 0) {
+				near = 1
+				if ((3.14 > value.angle) and (value.angle > 0)) {
+					fwd = fwd + 1
+				}
+				else if (value.angle == 0) {
+					facing = 1
+				}
+			}				
+		})
+		if (facing == 1) {
+			set_wheels(8.0,-8.0)}
+		else if (fwd > 1) {
+			set_wheels(8.0,8.0)}
+		else if ((fwd == 0) and (near == 0)) {
+			curr_ang = pose.orientation.yaw
+			next_ang = curr_ang + 1.5708
+			if (next_ang > 3.14) {
+				next_ang = next_ang - 6.2832}
+			else if (next_ang < -3.14) {
+				next_ang = next_ang + 6.2832}
+			ang_d = math.abs(next_ang - curr_ang)
+			if (fwd_timer % 40 == 0) {
+				limit = 0
+				while ((ang_d > 0.05) and (limit < 50)) {
+					set_wheels(-8.0,8.0)
+					curr_ang = pose.orientation.yaw
+					ang_d = math.abs(next_ang - curr_ang)
+					log("next:",next_ang," curr:",curr_ang," d:",ang_d)
+					limit = limit + 1}
+			}
+			else {
+				set_wheels(8.0,8.0)}
+			fwd_timer = fwd_timer + 1
+		}
+   # put your code here
+}
+	posx = pose.position.x
+	posy = pose.position.y
+
+}
+
+function ob_avoid() {
+	dvl = 4.0
+	dvr = 4.0
+	flag = 0
+
+	foreach(proximity, function(key, value) {
+		if (value.value > 0) {
+			flag = flag + 1
+			if (value.angle == 0) {
+				vr = -6.0
+				vl = 6.0
+				set_wheels(vl,vr)
+			}
+			else if ((value.angle > 3) and (value.angle < 3.15)) {
+				vl = 8.0
+				vr = 8.0
+			}
+			else {
+				vl = vl + dvl*math.sin(value.angle)
+				vr = vr - 1.1*dvr*math.sin(value.angle)
+				set_wheels(vl,vr)}
+		}
+
+		else if (flag == 0) {
+			if (rand_count%5 == 0) {
+ 		 		vl = 12.0
+ 				vr = math.rng.uniform(7.0,17.0)
+				set_wheels(vl,vr)}
+			rand_count = rand_count + 1
+
+		}
+		else if (flag > 3) {
+			vl = 7.0
+			vr = -6.0
+			set_wheels(vl,vr)
+		}
+	})
+}
+
+# This function is executed every time you press the 'reset'
+# button in the GUI. It is supposed to restore the state
+# of the controller to whatever it was right after init() was
+# called. The state of sensors and actuators is reset
+# automatically by ARGoS.
+function reset() {
+   # put your code here
+}
+
+
+
+# This function is executed only once, when the robot is removed
+# from the simulation
+function destroy() {
+   # put your code here
+}
