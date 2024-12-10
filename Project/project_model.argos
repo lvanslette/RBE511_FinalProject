@@ -138,8 +138,11 @@ $ argos3 -q box
     <!-- 
         movable object 
     -->
-    <box id="transport" size="0.3,0.3,0.05" mass="0.1" movable="true">
+    <box id="transport" size="0.3,0.3,0.05" mass="5.0" movable="true">
       <body position="0.3,-1,0" orientation="0,0,0" />
+      <leds medium= "leds">
+        <led offset=" 0.3, 0.3,0.05" anchor="origin" color="white" intensity="10.0" />
+      </leds>
 
 
 
@@ -149,11 +152,12 @@ $ argos3 -q box
     </box>
     
     <light id="goal"
-           position="1.5,1.5,1.0"
+           position="1.5,1.5,0.1"
            orientation="0,0,0"
            color="yellow"
            intensity="5.0"
-           medium="leds" />
+           medium="leds" 
+           anchor="transport"/>
 
     <!--
         You can distribute entities randomly. Here, we distribute

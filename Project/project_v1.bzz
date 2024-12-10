@@ -11,7 +11,6 @@
 
 # This function is executed every time you press the 'execute' button
 function init() {
-	s = swarm.create(1)
   rand_count = 0
 	r_count = 0
 	init_obj = {.x = 0.3, .y = -1.0}
@@ -24,6 +23,7 @@ function init() {
 	vr = 12.0
 	flag = 0
 	r_c = 0
+	flw = 0
 	recruited = {.0 = 0,.1 = 0,.2 = 0, .3 = 0}
 	set_wheels(vl,vr)
 }
@@ -34,22 +34,24 @@ function step() {
    # put your code here
 	r_count = 0
 	if (state > 0) {
-		neighbors.broadcast("recruited",1)}
+		neighbors.broadcast("recruited",state)}
 	if (state < 3) {
 		ob_avoid()
 		neighbors.listen("recruited",
 			function(vid,value,rid) {
-				if (value == 1) {
-					if (state < 2) {
+				if (value > 0) {
+					if (state == 0) {
 						log("no.",id,"enters state 2")}
 					state = 2 #waiting for full recruitment state
 					set_leds(0,204,0) #green
-					s.join()
 					recruited[rid] = 1
 					recruited[id] = 1
+					log(rid," has value ",value)
+					if (value == 1) {
+						log(rid," is leader")
+						neighbors.broadcast("leader",rid)}
 				}	
 			})
-		
 		distx = init_obj.x - posx
 		disty = init_obj.y - posy
 		dist_mag = math.sqrt((distx^2 + disty^2))
@@ -57,7 +59,6 @@ function step() {
 			state = 1 #recruiting neighbors state
 			log("no.",id,"enters state 1")
 			set_leds(0,0,255) # blue
-			s.join()
 			recruited[id] = 1
 			make_space = 0
 			neighbors.broadcast("mypose1",pose.position)
@@ -73,8 +74,138 @@ function step() {
 		set_leds(255,255,0) #yellow
 		neighbors.ignore("recruited")
 	}
+	if (state == 3) {
+		neighbors.listen("leader_state",
+			function(vid,value,rid) {
+				if (value == 4) {
+					log("leader state is 4")
+					flw = 1}
+			}
+		)
+		if (flw == 0) {
+			neighbors.listen("leader", 
+				function(vid,value,rid) {
+					log(id,"'s leader is ",value)
+					if (id == value) {
+						ob_avoid()
+						togo_x = init_obj.x - posx
+						togo_y = init_obj.y - posy
+						togo_mag = math.sqrt(togo_x^2 + togo_y^2)
+						togo_t = (pose.orientation.yaw - math.atan(togo_y,togo_x))
+						if (togo_t > 3.1416) {
+							togo_t = togo_t - 6.2832}
+						else if (togo_t < -3.1416) {
+							togo_t = togo_t + 6.2832}
+						follow(togo_x,togo_y,togo_t,togo_mag)
+						if (togo_mag < 0.4) {
+							state = 4
+							log("Finding position!")
+							set_leds(153,0,153) #purple
+							set_wheels(0.0,0.0)
+							neighbors.broadcast("leader_state",state)
+						}
+					}
+				})
+		}
+
+		else {
+			ob_check = 0
+			neighbors.listen("positioned",
+				function(vid,value,rid) {
+					foreach(proximity, function(key, value) {
+						if (value.value > 0.2) {
+							ob_check = ob_check + 1}})
+					if (ob_check > 0) {
+						ob_avoid()}
+					else {
+						r2r_x = value.x - pose.position.x
+						r2r_y = value.y - pose.position.y
+						r2r_mag = math.sqrt(r2r_x^2 + r2r_y^2)
+						r2r_t = (pose.orientation.yaw - math.atan(r2r_y,r2r_x))
+						if (r2r_t > 3.1416) {
+							r2r_t = r2r_t - 6.2832}
+						else if (r2r_t < -3.1416) {
+							r2r_t = r2r_t + 6.2832}
+						follow(r2r_x,r2r_y,r2r_t,r2r_mag)}
+					if (r2r_mag < 0.2) {
+						set_wheels(0.0,0.0)
+						set_leds(51,255,255)
+						state = 5}
+				})
+		}					
+	}
+					
+	if (state == 4) {
+		flw = 1
+		sensed = 0
+		left = 0
+		newx = -1.0
+		newy = -0.5
+		dt = angle_check(init_obj.x,init_obj.y,newx,newy)
+		if (dt > 0.1) {
+			wall_follow(init_obj.x,init_obj.y)
+		}
+		else {
+			d_px = newx - init_obj.x
+			d_py = newy - init_obj.y
+			d_pt = math.atan(d_py,d_px)
+			d_r_p = d_pt - pose.orientation.yaw
+			if (math.abs(d_r_p) < 0.1) {
+				state = 5
+				neighbors.broadcast("positioned",pose.position)
+				set_leds(51,255,255) #aqua
+				set_wheels(0.0,0.0)}
+			else {
+				set_wheels(-4.0,4.0)}
+		}
+	}
+	if (state == 5) {
+		neighbors.broadcast("positioned",pose.position)}
+	
 	posx = pose.position.x
 	posy = pose.position.y
+}
+
+function angle_check(currx,curry,nextx,nexty) {
+	dist_currx = currx - pose.position.x 
+	dist_curry = curry - pose.position.y
+	dist_nextx = nextx - pose.position.x
+	dist_nexty = nexty - pose.position.y
+	
+	curr_t = math.atan(dist_curry,dist_currx)
+	next_t = math.atan(dist_nexty,dist_nextx)
+	dt = math.abs(curr_t - next_t)
+	return dt
+}
+
+function wall_follow(centerx,centery) {
+	posx = pose.position.x
+	posy = pose.position.y
+	sensed = 0
+	left = 0
+	foreach(proximity, function(key, value) {
+		if (value.value > 0) {
+			sensed = sensed + 1
+			if ((value.angle > 0.786) and (value.angle < 2.35)) {
+				left = 1}
+		}
+	})
+	if ((sensed == 1) and (left == 1)) {
+		set_wheels(8.0,8.0)}
+	else if ((left == 0) and (sensed > 0)){
+		set_wheels(-4.0,4.0)}
+	else if (sensed > 1) {	
+		set_wheels(8.0,6.0)}
+	else if (sensed == 0) {
+		togo_x = centerx - posx
+		togo_y = centery - posy
+		togo_mag = math.sqrt(togo_x^2 + togo_y^2)
+		togo_t = (pose.orientation.yaw - math.atan(togo_y,togo_x))
+		if (togo_t > 3.1416) {
+			togo_t = togo_t - 6.2832}
+		else if (togo_t < -3.1416) {
+			togo_t = togo_t + 6.2832}
+		follow(togo_x,togo_y,togo_t,togo_mag)}
 }
 
 function ob_avoid() {
@@ -117,11 +248,19 @@ function ob_avoid() {
 	})
 }
 
-# This function is executed every time you press the 'reset'
-# button in the GUI. It is supposed to restore the state
-# of the controller to whatever it was right after init() was
-# called. The state of sensors and actuators is reset
-# automatically by ARGoS.
+function follow(tg_x,tg_y,tg_t,tg_mag) {
+	tg_t_thresh = 0.1
+	if (tg_t < tg_t_thresh*-1.0) {
+		set_wheels(10.0,15.0)}
+	else if (tg_t > tg_t_thresh) {
+		set_wheels(15.0,10.0)}
+	else if (tg_mag > 0.2) {
+		set_wheels(15.0,15.0)}
+	else {
+		set_wheels(0.0,0.0)}
+	tg_t = (pose.orientation.yaw - math.atan(tg_y,tg_x))
+}	
+
 function reset() {
    # put your code here
 }

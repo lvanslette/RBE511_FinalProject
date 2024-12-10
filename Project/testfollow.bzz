@@ -15,8 +15,11 @@ function init() {
   rand_count = 0
 	r_count = 0
   found = 0
-	fwd_timer = 40
-	init_next = 0
+	turn_timer = 40
+	fwd = 0
+	fwd_timer = 50
+	init_turn = 0
+	turnaway = 0
 	init_obj = {.x = 0.3, .y = -1.0}
 	goal = {.x = -1.5, .y = -0.5}
 	leader = {.x = 1000.0, .y = 1000.0}
@@ -49,6 +52,7 @@ function init() {
 # This function is executed at each time step
 # It must contain the logic of your controller
 function step() {
+
 	if (state > 0) {
 		neighbors.broadcast("recruited",1)}
 	if (state == 0) {
@@ -56,7 +60,7 @@ function step() {
 		distx = init_obj.x - posx
 		disty = init_obj.y - posy
 		dist_mag = math.sqrt((distx^2 + disty^2))
-		if ((dist_mag < 0.4) and (state == 0)) {
+		if ((dist_mag < 0.33) and (state == 0)) {
 			state = 1
 			log("no.",id,"enters state 1")
 			set_leds(0,0,255) # blue
@@ -67,55 +71,49 @@ function step() {
 		}
 	}
 	if (state == 1) {
-		fwd = 0
-		near = 0
-		facing = 0
-		last_ang = 0
+		sensed = 0
+		left = 0
 		foreach(proximity, function(key, value) {
 			if (value.value > 0) {
-				near = 1
-				if ((3.14 > value.angle) and (value.angle > 0)) {
-					fwd = fwd + 1
-				}
-				else if (value.angle == 0) {
-					facing = 1
-				}
-			}				
-		})
-		if (facing == 1) {
-			set_wheels(8.0,-8.0)}
-		else if (fwd >= 1) {
-			set_wheels(8.0,8.0)}
-		else if ((fwd == 0) and (near == 0)) {
-			curr_ang = pose.orientation.yaw
-			if (init_next == 0) {
-				next_ang = curr_ang + 1.5708
-				init_next = 1}
-			if (next_ang > 3.14) {
-				next_ang = next_ang - 6.2832}
-			else if (next_ang < -3.14) {
-				next_ang = next_ang + 6.2832}
-			ang_d = math.abs(next_ang - curr_ang)
-			set_wheels(-4.0,4.0)
-				limit = 0
-			if ((ang_d > 0.05) and (limit < 50)) {
-				set_wheels(-4.0,4.0)
-				curr_ang = pose.orientation.yaw
-				ang_d = math.abs(next_ang - curr_ang)
-				log("lim: ",limit)
-				log("next:",next_ang," curr:",curr_ang," d:",ang_d)
-				limit = limit + 1
+				sensed = sensed + 1
+				if ((value.angle > 0.786) and (value.angle < 2.35)) {
+					left = 1}
 			}
-			else {
-				set_wheels(8.0,8.0)}
-			fwd_timer = fwd_timer + 1
-		}
-   # put your code here
-}
+		})
+		if ((sensed == 1) and (left == 1)) {
+			set_wheels(8.0,8.0)}
+		else if ((left == 0) and (sensed > 0)){
+			set_wheels(-4.0,4.0)}
+		else if (sensed > 1) {	
+			set_wheels(8.0,6.0)}
+		else if (sensed == 0) {
+			togo_x = init_obj.x - posx
+			togo_y = init_obj.y - posy
+			togo_mag = math.sqrt(togo_x^2 + togo_y^2)
+			togo_t = (pose.orientation.yaw - math.atan(togo_y,togo_x))
+			if (togo_t > 3.1416) {
+				togo_t = togo_t - 6.2832}
+			else if (togo_t < -3.1416) {
+				togo_t = togo_t + 6.2832}
+			follow(togo_x,togo_y,togo_t,togo_mag)}
+	}
 	posx = pose.position.x
 	posy = pose.position.y
-
+   # put your code here
 }
+
+function follow(tg_x,tg_y,tg_t,tg_mag) {
+	tg_t_thresh = 0.05
+	if (tg_t < tg_t_thresh*-1.0) {
+		set_wheels(10.0,15.0)}
+	else if (tg_t > tg_t_thresh) {
+		set_wheels(15.0,10.0)}
+	else if (tg_mag > 0.2) {
+		set_wheels(15.0,15.0)}
+	else {
+		set_wheels(0.0,0.0)}
+	tg_t = (pose.orientation.yaw - math.atan(tg_y,tg_x))
+}	
 
 function ob_avoid() {
 	dvl = 4.0
