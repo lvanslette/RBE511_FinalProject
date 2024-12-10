@@ -1,0 +1,1347 @@
+!83
+'math
+'vec2
+'new
+'x
+'y
+'newp
+'cos
+'sin
+'length
+'sqrt
+'angle
+'atan
+'norm
+'add
+'sub
+'scale
+'dot
+'rotate
+'init
+'s
+'swarm
+'create
+'rand_count
+'r_count
+'init_obj
+'home
+'state
+'posx
+'pose
+'position
+'posy
+'set_leds
+'vl
+'vr
+'flag
+'r_c
+'recruited
+'set_wheels
+'threshold
+'step
+'neighbors
+'broadcast
+'ob_avoid
+'listen
+'log
+'no.
+'id
+'enters state 2
+'join
+'distx
+'disty
+'dist_mag
+'enters state 1
+'make_space
+'mypose1
+'foreach
+'all robots are recruited
+'ignore
+'goal_position
+'direction_vec
+'force_vector
+'assembly_point
+'distance
+'angle: 
+' force_vector: 
+', 
+'assembly_point: 
+'distance between points: 
+'
+"
+'move
+'rectangle_center
+'dvl
+'dvr
+'proximity
+'value
+'rng
+'uniform
+'sign_x
+'abs
+'sign_y
+'gotoc
+'reset
+'destroy
+
+	pushs 18
+	pushcn @__label_11
+	gstore
+	pushs 39
+	pushcn @__label_12
+	gstore
+	pushs 42
+	pushcn @__label_31
+	gstore
+	pushs 69
+	pushcn @__label_45
+	gstore
+	pushs 81
+	pushcn @__label_46
+	gstore
+	pushs 82
+	pushcn @__label_47
+	gstore
+	nop
+
+@__label_0
+	pushs 0	|4,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|4,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|4,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pusht	|4,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|12,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|12,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|12,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|12,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|12,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 2	|12,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushl @__label_1	|12,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|22,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|22,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|22,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|22,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|22,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 5	|22,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushl @__label_2	|22,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|34,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|34,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|34,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|34,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|34,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 8	|34,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushl @__label_3	|34,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|43,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|43,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|43,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|43,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|43,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 10	|43,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushl @__label_4	|43,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|52,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|52,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|52,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|52,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|52,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 12	|52,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushl @__label_5	|52,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|66,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|66,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|66,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|66,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|66,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 13	|66,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushl @__label_6	|66,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|79,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|79,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|79,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|79,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|79,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 14	|79,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushl @__label_7	|79,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|92,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|92,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|92,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|92,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|92,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 15	|92,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushl @__label_8	|92,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|105,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|105,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|105,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|105,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|105,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 16	|105,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushl @__label_9	|105,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|115,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|115,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|115,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|115,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|115,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 17	|115,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushl @__label_10	|115,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|13,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+
+@__exitpoint	|0,1,(null)
+	done	|0,1,(null)
+
+@__label_1
+	pusht	|13,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|13,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|13,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|13,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|13,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|13,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|13,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|13,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|13,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret1	|14,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret0	|22,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+
+@__label_2
+	pusht	|24,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|24,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|24,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|24,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|24,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|24,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|24,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 6	|24,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|24,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|24,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushi 1	|24,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	callc	|24,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|24,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|24,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|24,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|25,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|25,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|25,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|25,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|25,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 7	|25,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|25,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|25,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushi 1	|26,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	callc	|26,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|26,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|26,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret1	|27,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret0	|34,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+
+@__label_3
+	pushs 0	|35,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|35,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|35,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 9	|35,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|35,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|35,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|35,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|35,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|35,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|35,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|35,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|35,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|35,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|35,35,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|35,35,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|35,38,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|35,40,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|35,40,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|35,40,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	add	|35,40,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushi 1	|36,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	callc	|36,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret1	|36,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret0	|43,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+
+@__label_4
+	pushs 0	|44,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|44,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|44,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 11	|44,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|44,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|44,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|44,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|44,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|44,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|44,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|44,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushi 2	|45,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	callc	|45,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret1	|45,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret0	|52,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+
+@__label_5
+	pushnil	|53,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lstore 2	|53,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|53,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|53,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 1	|53,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|53,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|53,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 8	|53,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|53,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|53,28,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushi 1	|54,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	callc	|54,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lstore 2	|54,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pusht	|55,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|55,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|55,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|55,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|55,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|55,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|55,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	div	|55,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|55,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|55,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|56,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|56,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|56,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|56,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|57,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	div	|57,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|57,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret1	|58,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lremove 1	|66,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret0	|66,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+
+@__label_6
+	pusht	|68,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|68,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|68,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|68,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|68,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|68,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|68,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|68,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|68,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	add	|68,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|68,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|68,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|69,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|69,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|69,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|69,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|69,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|70,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|70,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	add	|70,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|70,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret1	|71,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret0	|79,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+
+@__label_7
+	pusht	|81,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|81,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|81,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|81,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|81,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|81,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|81,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|81,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|81,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	sub	|81,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|81,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|81,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|82,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|82,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|82,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|82,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|82,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|83,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|83,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	sub	|83,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|83,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret1	|84,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret0	|92,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+
+@__label_8
+	pusht	|94,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|94,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|94,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|94,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|94,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|94,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|94,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|94,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|94,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|94,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|95,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|95,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|95,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|95,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|96,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|96,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|96,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret1	|97,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret0	|105,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+
+@__label_9
+	lload 1	|106,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|106,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|106,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|106,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|106,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|106,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|106,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|106,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|106,28,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|106,28,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|106,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|107,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|107,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|107,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	add	|107,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret1	|107,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret0	|115,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+
+@__label_10
+	pusht	|117,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|117,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|117,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|117,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|117,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|117,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|117,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|117,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|117,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 6	|117,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|117,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|117,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushi 1	|117,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	callc	|117,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|117,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|117,30,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|117,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|117,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|117,39,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|117,39,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|117,43,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 7	|117,43,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|117,43,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|117,45,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushi 1	|117,46,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	callc	|117,46,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|117,46,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	sub	|117,46,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|117,46,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|117,46,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|118,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|118,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 3	|118,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|118,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|118,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|118,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|118,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 7	|118,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|118,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|118,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushi 1	|118,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	callc	|118,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|118,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 1	|118,30,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 4	|118,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|118,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 0	|118,39,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	gload	|118,39,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	dup	|118,43,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushs 6	|118,43,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tget	|118,43,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	lload 2	|118,45,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	pushi 1	|119,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	callc	|119,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	mul	|119,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	add	|119,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	tput	|119,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret1	|120,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/vec2.bzz
+	ret0	|13,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+
+@__label_11
+	pushs 19	|14,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 20	|14,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|14,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|14,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 21	|14,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|14,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|14,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|15,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|15,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|15,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 22	|15,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|15,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|16,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 23	|16,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|16,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|17,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 24	|17,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pusht	|17,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|17,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|17,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 0.3	|17,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|17,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|17,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|17,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf -1.0	|17,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|17,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|18,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 25	|18,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pusht	|18,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|18,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|18,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf -1.5	|18,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|18,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|18,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|18,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf -0.5	|18,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|18,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|19,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 26	|19,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|19,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|20,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 27	|20,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 28	|20,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|20,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 29	|20,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|20,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|21,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|21,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|21,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 30	|21,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 28	|21,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|21,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 29	|21,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|21,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|22,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|22,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|22,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|22,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 31	|22,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|22,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 255	|22,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|22,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|22,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|23,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|23,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|23,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|23,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 12.0	|23,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|24,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|24,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 12.0	|24,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|25,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 34	|25,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|25,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|26,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 35	|26,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|26,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|27,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 36	|27,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pusht	|27,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|27,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|27,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|27,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|27,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|27,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|27,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|27,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|27,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|27,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|27,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|27,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|27,34,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|27,34,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|27,37,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|27,41,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|27,42,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|28,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|28,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 37	|28,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|28,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|28,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|28,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|28,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|28,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|29,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|29,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|29,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 38	|29,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 0.1	|29,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|30,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	ret0	|34,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+
+@__label_12
+	pushs 23	|36,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|36,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|37,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 26	|37,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|37,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|37,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gt	|37,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_13	|37,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 40	|38,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|38,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|38,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 41	|38,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|38,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 36	|38,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|38,34,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|38,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|38,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|38,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_13	|40,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 26	|40,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|40,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|40,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lt	|40,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_15	|40,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|41,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 42	|41,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|41,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|42,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|42,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|42,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 40	|42,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|42,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|42,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 43	|42,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|42,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 36	|42,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushl @__label_17	|43,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|55,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|55,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|55,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 49	|55,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 24	|55,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|55,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|55,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|55,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 27	|56,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|56,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|56,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|56,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 50	|56,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 24	|56,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|56,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|56,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|56,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 30	|57,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|57,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|57,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|57,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 51	|57,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|57,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|57,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|57,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 9	|57,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|57,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 49	|57,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|57,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|57,30,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pow	|57,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 50	|57,39,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|57,39,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|57,40,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pow	|57,41,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	add	|57,41,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|58,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|58,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|58,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 51	|58,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|58,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 0.4	|58,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lt	|58,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 26	|58,34,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|58,34,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|58,37,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	eq	|58,38,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	land	|58,39,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_22	|58,41,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 26	|59,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|59,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|60,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|60,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 44	|60,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|60,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 45	|60,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 46	|60,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|60,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 52	|60,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|61,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|61,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|61,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|61,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 31	|61,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|61,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|61,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|61,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 255	|61,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|62,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|62,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|62,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 19	|62,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|62,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|62,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 48	|62,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|62,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|63,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|63,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|63,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 36	|63,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|63,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 46	|63,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|63,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|63,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|64,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 53	|64,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|64,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|65,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 40	|65,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|65,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|65,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 41	|65,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|65,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 54	|65,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 28	|65,37,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|65,37,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 29	|65,46,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|65,46,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|66,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|66,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|66,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_22	|67,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|67,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 55	|67,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|67,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 36	|67,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|67,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushl @__label_24	|67,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|70,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|70,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|70,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 23	|70,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|70,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 4	|70,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	eq	|70,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 26	|70,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|70,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|70,35,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lt	|70,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	land	|70,37,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_25	|70,39,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|71,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 44	|71,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|71,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 56	|71,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|72,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|72,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|72,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 26	|72,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|72,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|73,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|73,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 31	|73,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|73,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 255	|73,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 255	|73,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|73,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|74,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|74,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|74,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 40	|74,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|74,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|74,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 57	|74,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|74,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 36	|74,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|75,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|75,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|75,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_25	|76,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jump @__label_16	|77,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_15	|77,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 58	|80,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pusht	|80,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|80,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|80,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi -1	|80,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|80,28,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|80,28,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|80,31,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi -1	|80,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|80,37,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|81,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 59	|81,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|81,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|81,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 1	|81,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|81,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|81,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 2	|81,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|81,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 58	|81,47,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|81,47,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|81,49,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|81,49,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 24	|81,58,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|81,58,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|81,60,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|81,60,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|81,60,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 58	|81,75,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|81,75,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|81,77,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|81,77,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 24	|81,86,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|81,86,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|81,88,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|81,88,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|81,88,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|83,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|83,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|83,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 10	|83,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|83,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|83,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 1	|83,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|83,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|83,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 10	|83,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|83,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 59	|83,41,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|83,41,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|84,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|84,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|84,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 60	|84,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pusht	|84,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|84,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|84,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|84,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|84,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|84,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 6	|84,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|84,33,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 10	|84,39,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|84,39,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|84,40,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|84,40,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|84,40,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|84,40,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|84,43,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|84,51,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|84,51,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|84,55,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 7	|84,55,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|84,55,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 10	|84,61,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|84,61,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|84,62,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|84,62,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|84,62,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|86,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 61	|86,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pusht	|86,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|86,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|86,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 24	|86,35,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|86,35,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|86,37,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|86,37,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 60	|86,50,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|86,50,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|86,52,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|86,52,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|86,52,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|86,52,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|86,52,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|86,55,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 24	|86,67,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|86,67,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|86,69,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|86,69,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 60	|86,82,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|86,82,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|86,84,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|86,84,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|86,84,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|86,84,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|88,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 62	|88,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|88,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|88,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 1	|88,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|88,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|88,31,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 8	|88,31,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|88,31,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|88,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|88,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 1	|88,41,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|88,41,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|88,45,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 14	|88,45,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|88,45,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 28	|88,50,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|88,50,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 29	|88,59,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|88,59,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 61	|88,75,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|88,75,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|88,76,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|88,76,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|89,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|89,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|89,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 46	|89,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|89,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|89,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	eq	|89,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_27	|89,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|90,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 44	|90,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|90,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 63	|90,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 10	|90,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|90,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 64	|90,28,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 60	|90,59,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|90,59,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|90,61,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|90,61,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 65	|90,63,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 60	|90,81,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|90,81,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|90,83,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|90,83,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 6	|91,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|91,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|91,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|91,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 44	|91,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|91,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 66	|91,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 61	|91,41,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|91,41,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|91,43,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|91,43,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 65	|91,45,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 61	|91,65,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|91,65,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|91,67,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|91,67,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 4	|92,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|92,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|92,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|92,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 44	|92,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|92,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 67	|92,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 62	|92,44,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|92,44,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 68	|92,46,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|93,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|93,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|93,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_27	|94,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 62	|94,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|94,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 38	|94,28,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|94,28,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gt	|94,28,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_29	|94,30,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|96,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 31	|96,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|96,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 128	|96,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|96,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 128	|96,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|97,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|97,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|97,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|97,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 69	|97,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|97,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 61	|97,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|97,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|98,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|98,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|98,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jump @__label_30	|99,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_29	|99,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|100,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 31	|100,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|100,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 255	|100,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|100,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|100,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|101,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|101,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|101,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|101,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 69	|101,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|101,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 70	|101,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|101,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|102,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|102,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|102,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_30	|103,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_16	|107,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 27	|107,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 28	|107,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|107,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 29	|107,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|107,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|108,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|108,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|108,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 30	|108,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 28	|108,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|108,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 29	|108,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|108,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|109,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|109,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|109,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	ret0	|111,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+
+@__label_17
+	lload 2	|44,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|44,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	eq	|44,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_18	|44,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 26	|45,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|45,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|45,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lt	|45,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_20	|45,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|46,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 44	|46,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|46,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 45	|46,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 46	|46,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|46,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 47	|46,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|46,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|46,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|46,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_20	|47,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 26	|47,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|47,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|48,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|48,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 31	|48,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|48,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|48,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 204	|48,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|48,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|49,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|49,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|49,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 19	|49,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|49,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|49,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 48	|49,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|49,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|50,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|50,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|50,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 36	|50,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|50,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 3	|50,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|50,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|51,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 36	|51,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|51,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 46	|51,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|51,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|51,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tput	|52,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_18	|53,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	ret0	|53,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+
+@__label_24
+	pushs 23	|68,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 23	|68,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|68,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 2	|68,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	add	|68,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|68,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	ret0	|68,30,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+
+@__label_31
+	pushs 71	|112,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 4.0	|112,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|113,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 72	|113,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 4.0	|113,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|114,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 34	|114,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|114,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|116,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|116,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 55	|116,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|116,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 73	|116,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|116,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushl @__label_32	|116,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|149,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|149,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|149,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	ret0	|151,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+
+@__label_32
+	lload 2	|117,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 74	|117,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|117,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|117,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gt	|117,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_33	|117,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 34	|118,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 34	|118,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|118,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|118,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	add	|119,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|119,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 2	|119,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 10	|119,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|119,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|119,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	eq	|119,23,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_35	|119,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|120,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf -6.0	|120,10,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|121,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|121,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 6.0	|121,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|122,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|122,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 37	|122,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|122,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|122,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|122,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|122,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|122,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|123,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|123,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|123,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jump @__label_36	|124,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_35	|124,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 2	|124,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 10	|124,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|124,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|124,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gt	|124,28,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 2	|124,40,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 10	|124,47,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|124,47,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 3.15	|124,49,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lt	|124,53,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	land	|124,54,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_37	|124,56,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|125,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 8.0	|125,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|126,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|126,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 8.0	|126,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|127,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jump @__label_38	|128,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_37	|128,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|129,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|129,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|129,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 71	|129,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|129,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|129,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|129,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|129,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 7	|129,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|129,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 2	|129,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 10	|129,38,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|129,38,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|130,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|130,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	mul	|130,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	add	|130,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|130,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|130,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|130,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|130,12,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 1.1	|130,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 72	|130,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|130,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	mul	|130,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|130,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|130,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|130,30,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 7	|130,30,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|130,30,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 2	|130,36,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 10	|130,42,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|130,42,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|131,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|131,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	mul	|131,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|131,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|131,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|131,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 37	|131,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|131,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|131,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|131,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|131,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|131,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|131,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|131,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|131,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_38	|132,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_36	|132,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jump @__label_34	|134,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_33	|134,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 34	|134,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|134,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|134,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	eq	|134,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_39	|134,22,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 22	|135,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|135,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 30	|135,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	mod	|135,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|135,24,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	eq	|135,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_41	|135,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|136,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 12.0	|136,11,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|137,5,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|137,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|137,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|137,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 75	|137,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|137,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|137,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 76	|137,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|137,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 2.0	|137,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 17.0	|137,31,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|138,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|138,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|138,4,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|138,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 37	|138,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|138,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|138,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|138,17,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|138,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|138,20,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|138,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|138,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|138,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_41	|139,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 22	|139,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 22	|139,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|139,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|139,29,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	add	|141,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|141,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jump @__label_40	|143,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_39	|143,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 34	|143,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|143,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 3	|143,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gt	|143,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	jumpz @__label_43	|143,21,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|144,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 7.0	|144,8,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|145,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|145,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf -6.0	|145,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|146,3,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|146,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 37	|146,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|146,13,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 32	|146,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|146,16,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 33	|146,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|146,19,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|147,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|147,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|147,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_43	|148,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_40	|148,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+@__label_34	|148,1,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	ret0	|148,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+
+@__label_45
+	pushs 77	|154,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 1	|154,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|154,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|154,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 27	|154,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|154,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|154,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|154,38,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|154,38,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|154,42,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 78	|154,42,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|154,42,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 1	|154,56,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 3	|154,58,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|154,58,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 27	|154,63,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|154,63,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|154,63,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|155,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|155,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	div	|155,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|155,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 79	|155,9,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 1	|155,25,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|155,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|155,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 30	|155,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|155,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|155,32,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 0	|155,38,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|155,38,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	dup	|155,42,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 78	|155,42,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|155,42,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	lload 1	|155,56,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 4	|155,58,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	tget	|155,58,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 30	|155,63,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|155,63,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	sub	|155,63,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 1	|156,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|156,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	div	|156,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gstore	|156,2,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushnil	|156,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 80	|156,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|156,7,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 77	|156,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|156,14,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 0.1	|156,15,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	mul	|156,18,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 79	|156,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|156,26,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushf 0.1	|156,27,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	mul	|156,30,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 2	|157,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|157,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|157,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	ret0	|164,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+
+@__label_46
+	pushnil	|166,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushs 18	|166,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	gload	|166,6,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pushi 0	|167,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	callc	|167,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	pop	|167,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+	ret0	|173,0,/home/lvanslette/WPI/RBE511_FinalProject/Project/project_v1.bzz
+
+@__label_47
+	ret0	|0,1,(null)
