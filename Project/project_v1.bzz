@@ -2,9 +2,8 @@
 # When a robot is selected, its variables appear in this editor
 
 # Use Ctrl + Click (Cmd + Click on Mac) to move a selected robot to a different location
-
-
-
+include "vec2.bzz"
+#include "PathPlan.bzz"
 # Put your global variables here
 
 
@@ -26,15 +25,17 @@ function init() {
 	r_c = 0
 	recruited = {.0 = 0,.1 = 0,.2 = 0, .3 = 0}
 	set_wheels(vl,vr)
+  threshold = 0.20
+  calculate_local_goals()
 }
 
 # This function is executed at each time step
 # It must contain the logic of your controller
 function step() {
-   # put your code here
 	r_count = 0
 	if (state > 0) {
 		neighbors.broadcast("recruited",1)}
+  # find the object state
 	if (state < 3) {
 		ob_avoid()
 		neighbors.listen("recruited",
@@ -62,17 +63,53 @@ function step() {
 			make_space = 0
 			neighbors.broadcast("mypose1",pose.position)
 		}
-	}
-	foreach(recruited,function(key,value) {
-		r_count = r_count + value})
-	#Check if all robots are recruited
-	if ((r_count == 4) and (state < 3)) {
-		log("recruitment complete!")
-		set_wheels(0.0,0.0)
-		state = 3 #move to object state
-		set_leds(255,255,0) #yellow
-		neighbors.ignore("recruited")
-	}
+	  foreach(recruited,function(key,value) {
+		  r_count = r_count + value})
+	  #Check if all robots are recruited
+	  if ((r_count == 4) and (state < 3)) {
+		  log("all robots are recruited")
+		  state = 3 #move to object state
+		  set_leds(255,255,0) #yellow
+		  neighbors.ignore("recruited")
+    }
+	}  # END searching for object 
+  else {
+    # START moving the object 
+    # get current goal position
+    goal_position = get_local_goal(obj)
+    #goal_position = {.x = 0, .y = -2}
+    direction_vec = math.vec2.new(goal_position.x-obj[0], goal_position.y-obj[1])
+    # calculate force unit vector to go towards the local goal
+    angle = math.vec2.angle(direction_vec)
+    force_vector = {.x = math.cos(angle), .y = math.sin(angle)}
+    # calculate assembly point. TODO plot assembly point somehow
+    assembly_point = {.x = obj[0]-force_vector.x*0.2, .y = obj[1]-force_vector.y*0.2}
+    # get distance from current position and assembly point
+    distance = math.vec2.length(math.vec2.sub(pose.position, assembly_point))
+    if (distance > threshold) {
+      # too far away from assembly_point, move towards assembly_point
+      state = 4
+			set_leds(128,0,128) #purple
+      ob_avoid()
+    }
+    else {
+      set_leds(255,0,0) #red
+      rectangle_center = math.vec2.new(obj[0], obj[1])
+      move(rectangle_center)  # move towards rectangle central 
+    }
+
+    if(id==0){
+			log("current goal: [", goal_position.x, ", ", goal_position.y, "]")
+			log("object: [", obj[0], ", ", obj[1], "]")
+      #log("object angle: ", angle)
+      #log(" force_vector: [", force_vector.x, ", ", force_vector.y, "]")
+			#log("assembly_point: [", assembly_point.x, ", ", assembly_point.y, "]")
+			#log("distance between current position and assembly point: ", distance)
+      log()
+    }
+  }
+  # check if robot is close enough to local goal position
+
 	posx = pose.position.x
 	posy = pose.position.y
 }
@@ -81,40 +118,101 @@ function ob_avoid() {
 	dvl = 4.0
 	dvr = 4.0
 	flag = 0
-
+  print_id = 5
 	foreach(proximity, function(key, value) {
 		if (value.value > 0) {
 			flag = flag + 1
 			if (value.angle == 0) {
+        if(id==print_id){
+        log(id, ": seeing something right in front of us, turning to the right")}
 				vr = -6.0
 				vl = 6.0
-				set_wheels(vl,vr)
 			}
-			else if ((value.angle > 3) and (value.angle < 3.15)) {
+      # if we detected something right behind us
+			else if (math.abs(value.angle) > 1.5) {
+        if(id==print_id){
+				log(id, ": seeing something right behind us")}
 				vl = 8.0
 				vr = 8.0
 			}
 			else {
-				vl = vl + dvl*math.sin(value.angle)
-				vr = vr - 1.1*dvr*math.sin(value.angle)
-				set_wheels(vl,vr)}
+				vl = vl + dvl*math.cos(value.angle)
+				vr = vr - dvr*math.sin(value.angle)
+     		if(id==print_id){
+        log(id, ": turning based on where we are seeing detections: vl = ", vl, ", vr = ", vr)}
+				set_wheels(vl,vr)
+    	}
 		}
+  })
+    
 		#If no objects in proximity, perform random walk
-		else if (flag == 0) {
-			if (rand_count%30 == 0) {
- 		 		vl = 12.0
- 				vr = math.rng.uniform(2.0,17.0)
-				set_wheels(vl,vr)}
-			rand_count = rand_count + 1
-
-		}
+	if ((flag == 0) and (state < 4)) {
+    if(id==print_id){
+    log(id, ": random walking")}
+		if (rand_count%30 == 0) {
+ 	 		vl = 12.0
+ 			vr = math.rng.uniform(2.0,17.0)
+		set_wheels(vl,vr)}
+		rand_count = rand_count + 1
+	}
 		#If more than 3 sensors set off, turn around
-		else if (flag > 3) {
-			vl = 7.0
-			vr = -6.0
-			set_wheels(vl,vr)
-		}
-	})
+	else if ((flag > 3) or (value == 1)) {
+    log(id, ": reverse reverse")
+		vl = 7.0
+		vr = -6.0
+		set_wheels(vl,vr)
+	}
+  else if ((flag == 0) and (state == 4)) {
+     if(id==print_id){
+     log(id, ": moving towards assembly point")}
+  	 move(assembly_point)  # move towards assembly point
+  }
+  else
+  {
+    if(id==print_id){ log(id, ": obstacle avoiding") }
+  }
+
+}
+
+function move( goal_pose ) {
+  diff_position = {.x = goal_pose.x-pose.position.x, .y = goal_pose.y-pose.position.y}
+  x_body = diff_position.x*math.cos(pose.orientation.yaw) + diff_position.y*math.sin(pose.orientation.yaw)
+  y_body = -diff_position.x*math.sin(pose.orientation.yaw) + diff_position.y*math.cos(pose.orientation.yaw)
+  #if(id==0)
+  #{
+    #log("=> diff_position: [", diff_position.x, ", ", diff_position.y, "]")
+    #log("=> x_body,y_body: [", x_body, ", ", y_body, "]")
+  #}
+	gotoc(x_body*20, y_body*20)
+}
+
+
+
+function calculate_local_goals()
+{
+  goal_index = 0
+  goal1 = {.x = -1,.y = -1.0} 
+  goal2 = {.x = -1,.y = 0.5} 
+  goal3 = {.x = -0.5,.y = 0.5} 
+  goal4 = {.x = 1.5,.y = 1.5} 
+  goals = {.0 = goal1, .1 = goal2, .2 = goal3, .3 = goal4}
+}
+
+function get_local_goal(obj)
+{
+  # if object is within a certain distance of goal position, goto next goal position
+  objvec = math.vec2.new(obj[0],obj[1])
+  dist = math.vec2.length(math.vec2.sub(objvec, goals[goal_index]))
+  log("dist to goal: ", dist, ", threshold: ", threshold)
+  if( dist < threshold ) {
+    if( goal_index+1 == size(goals) ) {
+      log("WE MADE IT")
+    }else {
+      log("moving to the next goal...")
+      goal_index = goal_index + 1;
+    }
+  }
+  return goals[goal_index]
 }
 
 # This function is executed every time you press the 'reset'
@@ -124,6 +222,7 @@ function ob_avoid() {
 # automatically by ARGoS.
 function reset() {
    # put your code here
+	 init()
 }
 
 

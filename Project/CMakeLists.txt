@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8.0)
-project(RBE511_HW10)
+project(RBE511_FinalProject)
 
 # Compile in Release by default
 if(CMAKE_BUILD_TYPE STREQUAL "")
@@ -23,8 +23,8 @@ include_directories(${BUZZ_C_INCLUDE_DIR})
 include(${BUZZ_CMAKE_USEBUZZ}/UseBuzz.cmake)
 
 # Compile code
-add_library(threshold_model SHARED threshold_model.h threshold_model.cpp)
-target_link_libraries(threshold_model
+add_library(project_src SHARED project_src.h project_src.cpp)
+target_link_libraries(project_src
   ${BUZZ_LIBRARY}
   argos3core_simulator
   argos3plugin_simulator_dynamics2d
@@ -36,4 +36,4 @@ target_link_libraries(threshold_model
   argos3plugin_simulator_buzz)
 
 # Compile Buzz files
-buzz_make(threshold_model.bzz)
+buzz_make(project_v1.bzz)

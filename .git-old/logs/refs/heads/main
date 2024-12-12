@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 86a555e7e3ce7c3bfb51a7558ad78c4e185beea2 Lucas Vanslette <lvanslette@ubuntu.(none)> 1732577965 -0800	clone: from https://github.com/lvanslette/RBE511_FinalProject.git
+86a555e7e3ce7c3bfb51a7558ad78c4e185beea2 304296c0676020355829368252ce41550ab0289c Lucas Vanslette <lvanslette2@gmail.com> 1732578115 -0800	commit: initial commit
+304296c0676020355829368252ce41550ab0289c 5d65a0734d07353122b3cb53f9bd43f4d3bfd366 Lucas Vanslette <lvanslette2@gmail.com> 1732658777 -0800	commit: using hw9.bzz and movement.argos, creating starting environment for Final Project
+5d65a0734d07353122b3cb53f9bd43f4d3bfd366 0c8b3a176ce993980cbf020d85117e46d0706e07 Lucas Vanslette <lvanslette2@gmail.com> 1732658796 -0800	pull: Merge made by the 'recursive' strategy.
+0c8b3a176ce993980cbf020d85117e46d0706e07 fdf90202cc0230aa379811d5a5f7d05e38c723d2 Lucas Vanslette <lvanslette2@gmail.com> 1732663778 -0800	commit: organizing files
+fdf90202cc0230aa379811d5a5f7d05e38c723d2 0f9854f18769fe2629e73aedd186f88b049f6207 Lucas Vanslette <lvanslette2@gmail.com> 1732669374 -0800	commit: updated run script
+0f9854f18769fe2629e73aedd186f88b049f6207 cecf0685c8aaa8dcc7265b21cba5a3d5d05cc2e8 Lucas Vanslette <lvanslette2@gmail.com> 1732669377 -0800	pull: Merge made by the 'recursive' strategy.
+cecf0685c8aaa8dcc7265b21cba5a3d5d05cc2e8 9d46f9e45665b88badc07af7ea61789cb8e34161 Lucas Vanslette <lvanslette2@gmail.com> 1733706354 -0800	pull: Fast-forward
