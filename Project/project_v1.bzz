@@ -214,17 +214,6 @@ function get_local_goal(obj)
   return goals[goal_index]
 }
 
-function move( goal_position ) {
-  # calculate direction to move
-  # assign rotational velocity based on direction
-  sign_x = (goal_position.x-pose.position.x)/math.abs(goal_position.x-pose.position.x)
-  sign_y = (goal_position.y-pose.position.y)/math.abs(goal_position.y-pose.position.y)
-	if(id==0){
-      log("sign_x: ", sign_x, " sign_y: ", sign_y)
-  }
-  gotoc(sign_x*10, sign_y*10)
-}
-
 # This function is executed every time you press the 'reset'
 # button in the GUI. It is supposed to restore the state
 # of the controller to whatever it was right after init() was
