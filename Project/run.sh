@@ -1,5 +1,4 @@
 #!/bin/bash
-cd /home/lvanslette/WPI/RBE511_FinalProject/Project
 if [ ! -d "build" ]; then
    echo "running CMake..."
    mkdir build

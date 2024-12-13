@@ -1,4 +1,4 @@
-build/
+Project/build/
 data.dat
-*.bo
-*.bdb
+Project/*.bo
+Project/*.bdb

@@ -8,7 +8,8 @@ How to run with run.sh:
 
 - git clone https://github.com/lvanslette/RBE511_FinalProject.git 
 
-- cd RBE511_FinalProject
+- cd RBE511_FinalProject/Project
 
 - ./run.sh
 
+- select the project_v1.bzz script

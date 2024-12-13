@@ -86,7 +86,7 @@ function step() {
     # calculate force unit vector to go towards the local goal
     angle = math.vec2.angle(direction_vec)
     force_vector = {.x = math.cos(angle), .y = math.sin(angle)}
-    assembly_point = {.x = obj[0]-force_vector.x*0.2, .y = obj[1]-force_vector.y*0.2}
+    assembly_point = {.x = obj[0]-force_vector.x*0.3, .y = obj[1]-force_vector.y*0.3}
     # get distance from current position and assembly point
     distance = math.vec2.length(math.vec2.sub(pose.position, assembly_point))
     if (distance > threshold) {
@@ -120,7 +120,8 @@ function ob_avoid() {
 	dvl = 2.0
 	dvr = 2.0
 	flag = 0
-  
+  print_id = 1
+  saturated = 0
 	foreach(proximity, function(key, value) {
 		if (value.value > 0) {
 			flag = flag + 1
@@ -151,6 +152,9 @@ function ob_avoid() {
 				set_wheels(vl,vr)
     	}
 		}
+    if(value == 1) {
+      saturated = 1
+    }
   })
     
 		#If no objects in proximity, perform random walk
